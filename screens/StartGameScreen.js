@@ -32,7 +32,7 @@ const StartGameScreen=props=>{
     const confirmInputHandler=()=>{
         
         const chosenNumber=parseInt(enteredValue);
-        if(chosenNumber===Nan || chosenNumber<=0 || chosenNumber>99){
+        if(chosenNumber===NaN || chosenNumber<=0 || chosenNumber>99){
             return;
         }
 
