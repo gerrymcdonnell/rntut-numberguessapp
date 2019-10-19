@@ -1,7 +1,9 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput,View,Button } from 'react-native';
 
-import Card from '../components/Card'
+import Card from '../components/Card';
+import Colors from '../constants/colors'
+import colors from '../constants/colors';
 
 const StartGameScreen=props=>{
     return(
@@ -14,10 +16,11 @@ const StartGameScreen=props=>{
                 <Text>Select a Number</Text>
                 <TextInput/>
                 <View style={styles.buttonContainer}>
-                    
-                    <Button title="Reset" onPress={()=>{}} /> 
-                    <Button title="Confirm" onPress={()=>{}} />
-                    
+                
+                {/**problems wrapping view around buttons */}
+                <Button title="Reset" onPress={()=>{}} color={colors.secondary}> 
+                <Button title="Confirm" onPress={()=>{}} color={colors.primary}/>
+
                 </View>
                 
             </Card>
