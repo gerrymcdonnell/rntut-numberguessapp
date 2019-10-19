@@ -1,5 +1,11 @@
 import React ,{useState} from 'react';
-import { StyleSheet, Text, View,Button } from 'react-native';
+import { 
+    StyleSheet, 
+    Text, 
+    View,
+    Button,
+    TouchableWithoutFeedback
+} from 'react-native';
 
 import Card from '../components/Card';
 import Colors from '../constants/colors';
@@ -18,10 +24,9 @@ const StartGameScreen=props=>{
     };
     
     return(
-        <View style={styles.screen}>
-            
+        <TouchableWithoutFeedback>
+        <View style={styles.screen}>            
             <Text style={styles.title}>Start a New Game!</Text>
-
             <Card style={styles.inputContainer}>
 
                 <Text>Select a Number</Text>
@@ -46,6 +51,7 @@ const StartGameScreen=props=>{
                 
             </Card>
         </View>
+        </TouchableWithoutFeedback>
     )
 };
 
