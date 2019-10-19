@@ -38,7 +38,13 @@ const StartGameScreen=props=>{
 
         setConfirmed(true);        
         setSelectedNumber(chosenNumber);
-        setEnteredValue('');
+        setEnteredValue('');        
+    };
+
+    let confirmedOutput;
+
+    if(confirmed){
+        confirmedOutput=<Text>chosen: {selectedNumber}</Text>;
     }
 
     return(
@@ -68,6 +74,7 @@ const StartGameScreen=props=>{
                     </View>
                 
             </Card>
+            {confirmedOutput}
         </View>
         </TouchableWithoutFeedback>
     )
