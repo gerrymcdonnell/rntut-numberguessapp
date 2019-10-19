@@ -139,7 +139,7 @@ export default StartGameScreen;
     import React from 'react';
     import { StyleSheet, Text, View } from 'react-native';
 
-    const StartgameScreen=props=>{
+    const MyComponentName=props=>{
         return(
             //put component stuff here
             <View>
@@ -148,5 +148,5 @@ export default StartGameScreen;
         )
     };
     const styles=StyleSheet.create({});
-    export default StartGameScreen;
+    export default MyComponentName;
  */
