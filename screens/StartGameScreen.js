@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import { StyleSheet, Text, View,Button } from 'react-native';
 
 import Card from '../components/Card';
@@ -6,6 +6,17 @@ import Colors from '../constants/colors';
 import Input from '../components/input';
 
 const StartGameScreen=props=>{
+
+    //react hooks
+    const [enteredValue,setEnteredValue]=useState();
+
+   
+
+    const numberInputHandler=(inputText)=>{
+        //reg expression to replace anything not 0-9 in the entire text
+        setEnteredValue(inputText.replace(/[^0-9]/g),'');
+    };
+    
     return(
         <View style={styles.screen}>
             
@@ -14,7 +25,17 @@ const StartGameScreen=props=>{
             <Card style={styles.inputContainer}>
 
                 <Text>Select a Number</Text>
-                <Input style={styles.input} blurOnSubmit autoCorrect={false} keyboardType='numeric'/>
+                
+                <Input style={styles.input} 
+                    blurOnSubmit
+                    autoCapitalize='none'
+                    autoCorrect={false}
+                    keyboardType='number-pad'
+                    maxLength={2}
+                    /** */
+                    onChangeText={numberInputHandler}
+                    value={enteredValue}
+                />
                     <View style={styles.buttonContainer}>
                     
                     {/**problems wrapping view around buttons */}
