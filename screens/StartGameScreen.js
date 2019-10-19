@@ -16,6 +16,8 @@ const StartGameScreen=props=>{
 
     //react hooks
     const [enteredValue,setEnteredValue]=useState();
+    const [confirmed,setConfirmed]=useState(false);
+    const [selectedNumber,setSelectedNumber]=useState();
    
     const numberInputHandler=(inputText)=>{
         //reg expression to replace anything not 0-9 in the entire text
@@ -23,6 +25,19 @@ const StartGameScreen=props=>{
     };
     
     const resetInputHandler=()=>{
+        setEnteredValue('');
+        setConfirmed(false);
+    }
+
+    const confirmInputHandler=()=>{
+        
+        const chosenNumber=parseInt(enteredValue);
+        if(chosenNumber===Nan || chosenNumber<=0 || chosenNumber>99){
+            return;
+        }
+
+        setConfirmed(true);        
+        setSelectedNumber(chosenNumber);
         setEnteredValue('');
     }
 
@@ -48,7 +63,7 @@ const StartGameScreen=props=>{
                     
                     {/**problems wrapping view around buttons */}
                     <Button title="Reset" onPress={resetInputHandler} color={Colors.secondary} /> 
-                    <Button title="Confirm" onPress={()=>{}} color={Colors.primary} />
+                    <Button title="Confirm" onPress={confirmInputHandler} color={Colors.primary} />
 
                     </View>
                 
