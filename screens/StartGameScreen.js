@@ -44,7 +44,9 @@ const styles=StyleSheet.create({
         shadowRadius:6,
         shadowOpacity:0.26,
         elevation:5,
-        backgroundColor:'white'
+        backgroundColor:'white',
+        padding:20,
+        borderRadius:10
     },
     title:{
         fontSize:20,
