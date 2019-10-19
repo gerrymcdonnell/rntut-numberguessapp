@@ -16,14 +16,16 @@ const StartGameScreen=props=>{
 
     //react hooks
     const [enteredValue,setEnteredValue]=useState();
-
    
-
     const numberInputHandler=(inputText)=>{
         //reg expression to replace anything not 0-9 in the entire text
         setEnteredValue(inputText.replace(/[^0-9]/g),'');
     };
     
+    const resetInputHandler=()=>{
+        setEnteredValue('');
+    }
+
     return(
         <TouchableWithoutFeedback onPress={()=>{Keyboard.dismiss()}}>
         <View style={styles.screen}>            
@@ -45,7 +47,7 @@ const StartGameScreen=props=>{
                     <View style={styles.buttonContainer}>
                     
                     {/**problems wrapping view around buttons */}
-                    <Button title="Reset" onPress={()=>{}} color={Colors.secondary} /> 
+                    <Button title="Reset" onPress={resetInputHandler} color={Colors.secondary} /> 
                     <Button title="Confirm" onPress={()=>{}} color={Colors.primary} />
 
                     </View>
