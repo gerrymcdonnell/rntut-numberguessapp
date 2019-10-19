@@ -4,18 +4,18 @@ import { StyleSheet, Text, TextInput,View,Button } from 'react-native';
 const StartGameScreen=props=>{
     return(
         <View style={styles.screen}>
-            <Text>The game Screen</Text>
+            <Text>Start a New Game!</Text>
 
             <View>
-                <Text>Select a number</Text>
-                <TextInput/>
 
+                <Text>Select a Number</Text>
+                <TextInput/>
                 <View>
-                    <Button title="reset" onPress={()=>{}}/>
-                    <Button title="confirm" onPress={()=>{}}/>
+                    <Button title="Reset" onPress={()=>{}} />
+                    <Button title="Confirm" onPress={()=>{}} />
                 </View>
-                {/*ended at 4hrs 03*/}
             </View>
+
         </View>
     )
 };
