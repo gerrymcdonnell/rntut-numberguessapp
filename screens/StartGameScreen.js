@@ -11,6 +11,7 @@ const StartGameScreen=props=>{
 
                 <Text>Select a Number</Text>
                 <TextInput/>
+                <TextInput/>
                 <View style={styles.buttonContainer}>
                     <Button title="Reset" onPress={()=>{}} />
                     <Button title="Confirm" onPress={()=>{}} />
@@ -37,7 +38,13 @@ const styles=StyleSheet.create({
     inputContainer:{
         width:300,
         maxWidth:'80%',
-        alignItems:'center'
+        alignItems:'center',
+        shadowColor:'black',
+        shadowOffset:{width:0,height:2},
+        shadowRadius:6,
+        shadowOpacity:0.26,
+        elevation:5,
+        backgroundColor:'white'
     },
     title:{
         fontSize:20,
