@@ -14,14 +14,14 @@ const StartGameScreen=props=>{
             <Card style={styles.inputContainer}>
 
                 <Text>Select a Number</Text>
-                <Input/>
-                <View style={styles.buttonContainer}>
-                
-                {/**problems wrapping view around buttons */}
-                <Button title="Reset" onPress={()=>{}} color={Colors.secondary} /> 
-                <Button title="Confirm" onPress={()=>{}} color={Colors.primary} />
+                <Input style={styles.input} blurOnSubmit autoCorrect={false} keyboardType='numeric'/>
+                    <View style={styles.buttonContainer}>
+                    
+                    {/**problems wrapping view around buttons */}
+                    <Button title="Reset" onPress={()=>{}} color={Colors.secondary} /> 
+                    <Button title="Confirm" onPress={()=>{}} color={Colors.primary} />
 
-                </View>
+                    </View>
                 
             </Card>
         </View>
@@ -51,6 +51,10 @@ const styles=StyleSheet.create({
     },
     button:{
         width:100
+    },
+    input:{
+        width:50,
+        textAlign:'center'
     }
 });
 
