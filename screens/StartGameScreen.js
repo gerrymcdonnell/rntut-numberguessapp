@@ -2,8 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, TextInput,View,Button } from 'react-native';
 
 import Card from '../components/Card';
-import Colors from '../constants/colors'
-import colors from '../constants/colors';
+import Colors from '../constants/colors';
 
 const StartGameScreen=props=>{
     return(
@@ -18,8 +17,8 @@ const StartGameScreen=props=>{
                 <View style={styles.buttonContainer}>
                 
                 {/**problems wrapping view around buttons */}
-                <Button title="Reset" onPress={()=>{}} color={colors.secondary}> 
-                <Button title="Confirm" onPress={()=>{}} color={colors.primary}/>
+                <Button title="Reset" onPress={()=>{}} color={Colors.secondary} /> 
+                <Button title="Confirm" onPress={()=>{}} color={Colors.primary} />
 
                 </View>
                 
