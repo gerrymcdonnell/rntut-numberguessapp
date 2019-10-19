@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput,View,Button } from 'react-native';
+import { StyleSheet, Text, View,Button } from 'react-native';
 
 import Card from '../components/Card';
 import Colors from '../constants/colors';
+import Input from '../components/input';
 
 const StartGameScreen=props=>{
     return(
@@ -13,7 +14,7 @@ const StartGameScreen=props=>{
             <Card style={styles.inputContainer}>
 
                 <Text>Select a Number</Text>
-                <TextInput/>
+                <Input/>
                 <View style={styles.buttonContainer}>
                 
                 {/**problems wrapping view around buttons */}
