@@ -4,7 +4,8 @@ import {
     Text, 
     View,
     Button,
-    TouchableWithoutFeedback
+    TouchableWithoutFeedback,
+    Keyboard
 } from 'react-native';
 
 import Card from '../components/Card';
@@ -24,7 +25,7 @@ const StartGameScreen=props=>{
     };
     
     return(
-        <TouchableWithoutFeedback>
+        <TouchableWithoutFeedback onPress={()=>{Keyboard.dismiss()}}>
         <View style={styles.screen}>            
             <Text style={styles.title}>Start a New Game!</Text>
             <Card style={styles.inputContainer}>
