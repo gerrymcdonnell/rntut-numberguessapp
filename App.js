@@ -8,8 +8,8 @@ import GameScreen from './screens/GameScreen';
 
 /**
  * yt video
- * https://youtu.be/qSRrxpdMpVc?t=14444
- * 4hr mark starts
+ * https://youtu.be/qSRrxpdMpVc?t=19149
+ * 5hr19 mark starts
  */
 export default function App() {
 
