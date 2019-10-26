@@ -28,12 +28,18 @@ const GameScreen=props=>{
     const currentHigh=useRef(100);
     const [rounds,setRounds]=useState(0);
 
-    //after render
+    //obj destructering pull the props from props and store as constants
+    const {userChoice,onGameOver}=props;
+
+    //useEffect
+    /**param 1 is the function execuste after compionetn render
+     * param 2 is the depependancies i.e any vlaue coming outside of the effect fgunction
+     */
     useEffect(()=>{
-        if(currentGuess===props.userChoice){
-            props.onGameOver(rounds);
+        if(currentGuess===userChoice){
+            onGameOver(rounds);
         }
-    });
+    },[currentGuess,userChoice,onGameOver]);
 
     const nextGuessHandler=direction=>{
         if ((direction==='lower' && currentGuess<props.userChoice) || (direction==='greater' &&currentGuess>props.userChoice))

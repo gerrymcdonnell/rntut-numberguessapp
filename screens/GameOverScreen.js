@@ -8,6 +8,8 @@ import { StyleSheet, Text, View } from 'react-native';
                 <Text>
                     The game is over
                 </Text>
+                <Text>Number of rounds:{props.roundsNumber}</Text>
+                <Text>Number was :{props.userNumber}</Text>
             </View>
         )
     };
